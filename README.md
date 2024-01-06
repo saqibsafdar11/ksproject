@@ -1,11 +1,9 @@
 *Analyzing Kickstarter Projects
 
-The aim of the project is to understand what might influence the success of a campaign on Kickstarter - the data sourse is a selection of fields from Kaggle. 
+The aim of the project is to understand what might influence the success of a campaign on Kickstarter 
+[Data source source on Kaggle](https://www.kaggle.com/datasets/kemical/kickstarter-projects/data)
 
-[Data source source on Kaggle:](https://www.kaggle.com/datasets/kemical/kickstarter-projects/data)
-
-
-The code suggests that the projects are failing due to a lack of funding, rather than a lack of backers. This can be inferred from the SELECT statement on line 46, which includes a CASE statement to determine the funding status of each project. The CASE statement checks the ratio of pledged amount to the goal amount, and assigns a funding status based on that ratio.
+The SQL code suggests that the projects are failing due to a lack of funding, rather than a lack of backers. This can be inferred from the SELECT statement in line 34, which includes a CASE statement to determine the funding status of each project. The CASE statement checks the ratio of pledged amount to the goal amount, and assigns a funding status based on that ratio.
 
 If the ratio is greater than or equal to 1, the project is considered "Fully funded". If the ratio is between 0.75 and 1, the project is considered "Nearly funded". Otherwise, if the ratio is less than 0.75, the project is considered "Not nearly funded".
 
