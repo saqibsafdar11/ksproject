@@ -6,7 +6,7 @@ PRAGMA table_info(ksprojects);
 SELECT 
 main_category, goal, backers, pledged FROM ksprojects LIMIT 10;
 
--- Repeat your query from the previous screen, but this time only keep the records where the project state is either 'failed', 'canceled', or 'suspended'.
+-- Repeat query, but this time we will only keep the records where the project state is either 'failed', 'canceled', or 'suspended'.
 
 
 SELECT
@@ -15,7 +15,7 @@ FROM ksprojects
 WHERE state IN ('failed', 'cancelled', 'suspended')
 LIMIT 10;
 
---Expand your query from the previous screen to find which of these projects had at least 100 backers and at least $20,000 pledged.
+--Expand the query to find which of these projects had at least 100 backers and at least $20,000 pledged.
 
 SELECT main_category, backers, pledged, goal
   FROM ksprojects
@@ -44,15 +44,8 @@ SELECT main_category, backers, pledged, goal,
  ORDER BY main_category, pct_pledged DESC
  LIMIT 10;
 
--- tablw shows failed projects are failing becasue of a lack o funding not backers
 
-PRAGMA table_info(ksprojects);
+-- view projects by categories, along with the percentage of the goal that was funded.
 
-SELECT main_category
-FROM ksprojects
-LIMIT 10;
 
-SELECT category
-FROM ksprojects
-LIMIT 10;
 
